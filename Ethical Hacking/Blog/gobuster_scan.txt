@@ -1,0 +1,31 @@
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.188.84/0
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+[2K/atom                 (Status: 301) [Size: 0] [--> http://10.10.188.84/0/feed/atom/]
+[2K/feed                 (Status: 301) [Size: 0] [--> http://10.10.188.84/0/feed/]
+[2K/group                (Status: 500) [Size: 251]
+[2K/groupcp              (Status: 500) [Size: 251]
+[2K/grid                 (Status: 500) [Size: 251]
+[2K/groupware            (Status: 500) [Size: 251]
+[2K/groups               (Status: 500) [Size: 251]
+[2K/group_inlinemod      (Status: 500) [Size: 251]
+[2K/gs                   (Status: 500) [Size: 251]
+[2K/gsm                  (Status: 500) [Size: 251]
+[2K/guess                (Status: 500) [Size: 251]
+[2K/guestbook            (Status: 500) [Size: 251]
+[2K/guest                (Status: 500) [Size: 251]
+
+===============================================================
+Finished
+===============================================================

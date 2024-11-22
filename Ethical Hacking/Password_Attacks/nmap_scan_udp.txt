@@ -1,0 +1,54 @@
+# Nmap 7.94 scan initiated Sun Dec  3 21:58:06 2023 as: nmap -sV -sC -T4 -oN nmap_scan_udp.txt 10.10.250.115
+Nmap scan report for 10.10.250.115
+Host is up (0.13s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+21/tcp  open  ftp      vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 111      116          4096 Oct 12  2021 files
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.6.44.161
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp  open  ssh      OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b0:37:63:80:16:6f:c1:98:cc:51:78:a3:9b:7e:0b:bf (RSA)
+|   256 65:02:62:2a:b7:b5:9e:aa:fd:94:33:44:1e:43:57:d8 (ECDSA)
+|_  256 75:7c:85:01:a0:4b:58:9a:dc:d9:7d:20:fb:22:5b:fc (ED25519)
+25/tcp  open  smtp     Postfix smtpd
+|_smtp-commands: mail.thm.labs, SIZE 10240000, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, CHUNKING
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=localhost
+| Subject Alternative Name: DNS:localhost
+| Not valid before: 2021-10-07T08:49:39
+|_Not valid after:  2031-10-05T08:49:39
+80/tcp  open  http     Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+465/tcp open  ssl/smtp Postfix smtpd
+| ssl-cert: Subject: commonName=localhost
+| Subject Alternative Name: DNS:localhost
+| Not valid before: 2021-10-07T08:49:39
+|_Not valid after:  2031-10-05T08:49:39
+|_smtp-commands: mail.thm.labs, PIPELINING, SIZE 10240000, ETRN, AUTH PLAIN LOGIN, AUTH=PLAIN LOGIN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, CHUNKING
+|_ssl-date: TLS randomness does not represent time
+587/tcp open  smtp     Postfix smtpd
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=localhost
+| Subject Alternative Name: DNS:localhost
+| Not valid before: 2021-10-07T08:49:39
+|_Not valid after:  2031-10-05T08:49:39
+|_smtp-commands: mail.thm.labs, PIPELINING, SIZE 10240000, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, CHUNKING
+Service Info: Host: mail.thm.labs; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec  3 21:58:43 2023 -- 1 IP address (1 host up) scanned in 37.73 seconds

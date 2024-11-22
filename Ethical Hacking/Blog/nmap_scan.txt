@@ -1,0 +1,17 @@
+# Nmap 7.94 scan initiated Sun Dec  3 22:47:23 2023 as: nmap -sC -sV -T4 -oN nmap_scan.txt 10.10.188.84
+Nmap scan report for 10.10.188.84
+Host is up (0.15s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 57:8a:da:90:ba:ed:3a:47:0c:05:a3:f7:a8:0a:8d:78 (RSA)
+|   256 c2:64:ef:ab:b1:9a:1c:87:58:7c:4b:d5:0f:20:46:26 (ECDSA)
+|_  256 5a:f2:62:92:11:8e:ad:8a:9b:23:82:2d:ad:53:bc:16 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29
+|_http-generator: WordPress 5.0
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+Service Info: Host: blog.thm; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec  3 22:48:15 2023 -- 1 IP address (1 host up) scanned in 52.06 seconds
